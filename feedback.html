@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+           survey_form
+    </title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        form { 
+            background-color: rgb(123, 167, 20);
+            text-decoration: bold;
+            color: black;
+            max-width: 500px;
+            margin: 50px auto;
+            background-image: url(https://media.istockphoto.com/photos/round-podium-or-pedestal-with-blue-background-picture-id1226478932?b=1&k=20&m=1226478932&s=170667a&w=0&h=hXsvxQilNanpKx7QC_tIsFUOKPl8fdIDfJ_QSKXesGE=);
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        /* Styling Button */
+        button {
+            background-color: tomato;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: rgb(108, 82, 150);
+        }
+
+        p {
+            display: none;
+        }
+
+        #A:hover p {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(0, 0, 0);">food restaurent Survey Form</h1>
+
+    <!-- Create Form -->
+    <form id="form">
+
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text" id="name" placeholder="Enter your name" minlength="3" required pattern="[a-Z]" />
+
+
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <!-- Input Type Email-->
+            <input type="email" id="email" placeholder="Enter your email" required pattern=".+@gmail.com" />
+            <label style="margin-top: 15px;" for="">mobile Number</label>
+            <input style="margin-top: 20px;" placeholder="Phone number" type="number" name="" id="" required
+                minlength="10" maxlength="10">
+
+
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="number" id="age" placeholder="Enter your age" required maxlength="3" minlength="1" />
+        </div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                food items
+            </label>
+
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="select">----select---- </option>
+                <option value="burger">Burger good/Bad</option>
+                <option value="pizza">Pizza good/bad</option>
+                <option value="Sandwich">Sandwich good/bad</option>
+                <option value="Sandwich">Sandwich good/bad</option>
+                <option value="other">Other..</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label style="color: rgb(0, 0, 0); font-size: large;">
+                Please Give your Feedback
+            </label>
+
+            <!-- Input Type Radio Button -->
+
+            <input type="radio" name="poor" value="service">Good</input>
+
+
+            <input type="radio" name="good" value="service">Bad</input>
+
+
+            <input type="radio" name="better" value="service">Excellent</input>
+
+
+            <input type="radio" name="best" value="service">Better</input>
+
+        </div>
+
+
+        <div class="form-control">
+            <label for="comment">
+                Any suggestions you want to give.
+            </label>
+
+
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment" placeholder></textarea>
+        </div>
+
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">Submit</button>
+    </form>
+    <a href="rating.html">Click The Link for Star Rating</a>
+
+</body>
+
+</html>
